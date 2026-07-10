@@ -210,7 +210,7 @@ class UnemploymentAnalyzer:
         covid = self.data[self.data['Date'] >= '30-04-2020']
         box_data = [pre_covid['Estimated Unemployment Rate (%)'], 
                     covid['Estimated Unemployment Rate (%)']]
-        bp = plt.boxplot(box_data, labels=['Pre-COVID', 'COVID'], patch_artist=True)
+        bp = plt.boxplot(box_data, tick_labels=['Pre-COVID', 'COVID'], patch_artist=True)
         bp['boxes'][0].set_facecolor('lightgreen')
         bp['boxes'][1].set_facecolor('lightcoral')
         plt.title('Unemployment Rate: Pre vs COVID Period', fontsize=12, fontweight='bold')

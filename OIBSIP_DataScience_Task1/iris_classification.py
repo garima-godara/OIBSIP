@@ -154,7 +154,7 @@ class IrisClassifier:
         
         # Logistic Regression
         print("\nTraining Logistic Regression...")
-        lr_model = LogisticRegression(max_iter=200, random_state=42, multi_class='multinomial')
+        lr_model = LogisticRegression(max_iter=200, random_state=42)
         lr_model.fit(self.X_train_scaled, self.y_train)
         self.models['Logistic Regression'] = lr_model
         print("✓ Logistic Regression trained")
